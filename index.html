@@ -1,0 +1,1548 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منظومة متكاملة للتسويق الرقمي وتعزيز الانتشار والأداء | KAAF Group</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Cairo & IBM Plex Sans Arabic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kaaf: {
+                            blue: '#0A4C86',
+                            blueLight: '#1C75C8',
+                            blueDeep: '#05233E',
+                            blueDarkest: '#031424',
+                            green: '#00875A',
+                            greenLight: '#00B377',
+                            greenDeep: '#023824',
+                            gold: '#D4AF37',
+                            goldLight: '#F5DE88',
+                            purple: '#7C3AED',
+                            purpleLight: '#A78BFA',
+                            purpleDeep: '#2E1065',
+                            rose: '#E11D48',
+                            roseLight: '#FB7185',
+                            cyan: '#06B6D4',
+                            cyanLight: '#67E8F9',
+                            amber: '#F59E0B',
+                            dark: '#030812',
+                            darkSlate: '#081220',
+                            cardBg: '#0B1A2E',
+                            border: '#1B314B'
+                        }
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        ibm: ['IBM Plex Sans Arabic', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'glow-blue': '0 0 35px -5px rgba(10, 76, 134, 0.6)',
+                        'glow-purple': '0 0 35px -5px rgba(124, 58, 237, 0.6)',
+                        'glow-cyan': '0 0 35px -5px rgba(6, 182, 212, 0.6)',
+                        'glow-green': '0 0 35px -5px rgba(0, 135, 90, 0.6)',
+                        'glow-gold': '0 0 35px -5px rgba(212, 175, 55, 0.55)',
+                        'web-card': '0 20px 45px -15px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(255, 255, 255, 0.08)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Cairo', 'IBM Plex Sans Arabic', sans-serif;
+            background-color: #030812;
+            color: #E2E8F0;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        #interactive-bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.65;
+        }
+
+        .kaaf-ribbon {
+            background: linear-gradient(90deg, 
+                #0A4C86 0%, 
+                #06B6D4 20%, 
+                #00875A 40%, 
+                #D4AF37 60%, 
+                #7C3AED 80%, 
+                #E11D48 100%
+            );
+            height: 4px;
+        }
+
+        .web-card-blue {
+            background: linear-gradient(135deg, rgba(10, 30, 56, 0.85) 0%, rgba(5, 16, 32, 0.95) 100%);
+            border: 1px solid rgba(28, 117, 200, 0.35);
+            backdrop-filter: blur(14px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .web-card-blue:hover {
+            border-color: rgba(28, 117, 200, 0.75);
+            transform: translateY(-3px);
+            box-shadow: 0 16px 35px -10px rgba(10, 76, 134, 0.5);
+        }
+
+        .web-card-purple {
+            background: linear-gradient(135deg, rgba(30, 18, 54, 0.85) 0%, rgba(14, 8, 28, 0.95) 100%);
+            border: 1px solid rgba(167, 139, 250, 0.35);
+            backdrop-filter: blur(14px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .web-card-purple:hover {
+            border-color: rgba(167, 139, 250, 0.75);
+            box-shadow: 0 16px 35px -10px rgba(124, 58, 237, 0.5);
+        }
+
+        .web-card-cyan {
+            background: linear-gradient(135deg, rgba(8, 36, 48, 0.85) 0%, rgba(4, 18, 26, 0.95) 100%);
+            border: 1px solid rgba(6, 182, 212, 0.35);
+            backdrop-filter: blur(14px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .web-card-cyan:hover {
+            border-color: rgba(6, 182, 212, 0.75);
+            box-shadow: 0 16px 35px -10px rgba(6, 182, 212, 0.5);
+        }
+
+        .web-card-green {
+            background: linear-gradient(135deg, rgba(8, 38, 28, 0.85) 0%, rgba(4, 20, 15, 0.95) 100%);
+            border: 1px solid rgba(0, 179, 119, 0.35);
+            backdrop-filter: blur(14px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .web-card-green:hover {
+            border-color: rgba(0, 179, 119, 0.75);
+            box-shadow: 0 16px 35px -10px rgba(0, 135, 90, 0.5);
+        }
+
+        .web-card-gold {
+            background: linear-gradient(135deg, rgba(45, 36, 15, 0.85) 0%, rgba(18, 14, 5, 0.95) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            backdrop-filter: blur(14px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .web-card-gold:hover {
+            border-color: rgba(212, 175, 55, 0.85);
+            transform: translateY(-3px);
+            box-shadow: 0 16px 35px -10px rgba(212, 175, 55, 0.5);
+        }
+
+        @keyframes float-brand {
+            0%, 100% { transform: translateY(0px); box-shadow: 0 10px 25px -5px rgba(10, 76, 134, 0.6); }
+            50% { transform: translateY(-7px); box-shadow: 0 18px 30px -5px rgba(10, 76, 134, 0.8); }
+        }
+        @keyframes float-wa {
+            0%, 100% { transform: translateY(0px) scale(1); box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.5); }
+            50% { transform: translateY(-7px) scale(1.03); box-shadow: 0 18px 30px -5px rgba(37, 211, 102, 0.8); }
+        }
+
+        .anim-float-brand { animation: float-brand 4s ease-in-out infinite; }
+        .anim-float-wa { animation: float-wa 4s ease-in-out infinite 0.5s; }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.2s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background: #06B6D4;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        @media print {
+            body { background-color: #fff !important; color: #111 !important; }
+            #interactive-bg-canvas, aside, header, #floating-kaaf-btn, #floating-wa-btn { display: none !important; }
+            .web-card-blue, .web-card-gold, .web-card-green, .web-card-purple, .web-card-cyan {
+                background: #f8fafc !important;
+                border: 1px solid #cbd5e1 !important;
+                color: #0f172a !important;
+                box-shadow: none !important;
+            }
+            .text-white { color: #0f172a !important; }
+            .text-gray-200, .text-gray-300, .text-gray-400 { color: #334155 !important; }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-kaaf-cyan selection:text-slate-950">
+
+    <!-- Interactive Ambient Canvas Layer -->
+    <canvas id="interactive-bg-canvas"></canvas>
+
+    <!-- Floating Brand Logo (Bottom Left) -->
+    <aside id="floating-kaaf-btn" class="fixed bottom-6 left-6 z-50">
+        <a href="https://kaafmarketing.sa/" target="_blank" rel="noopener noreferrer" title="مجموعة كاف | KAAF Group" class="block w-14 h-14 rounded-full overflow-hidden border-2 border-kaaf-cyanLight/80 p-0.5 bg-black/90 anim-float-brand transition-all hover:scale-110 group backdrop-blur-md">
+            <img src="https://i.ibb.co/qLQcG9vr/Whats-App-Image-2026-08-26-at-11-29-58.jpg" alt="KAAF Group Logo" class="w-full h-full object-cover rounded-full" onerror="this.src='https://placehold.co/100x100/0A4C86/ffffff?text=KAAF'">
+        </a>
+    </aside>
+
+    <!-- Floating WhatsApp CTA (Bottom Right) -->
+    <aside id="floating-wa-btn" class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/966537553910" target="_blank" rel="noopener noreferrer" title="التواصل المباشر مع استشاري التسويق الرقمي (+966 53 755 3910)" class="w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center border-2 border-emerald-200/80 anim-float-wa transition-all hover:scale-110 shadow-lg">
+            <i class="fa-brands fa-whatsapp text-3xl"></i>
+        </a>
+    </aside>
+
+    <!-- Document Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-kaaf-dark/90 backdrop-blur-xl border-b border-kaaf-border/70 px-4 lg:px-12 py-3.5 transition-all">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <!-- Brand Logo & Identity (Right in RTL) -->
+            <div class="flex items-center gap-3.5">
+                <div class="w-11 h-11 rounded-2xl overflow-hidden border border-kaaf-blueLight/50 p-0.5 bg-black shrink-0 shadow-glow-blue">
+                    <img src="https://i.ibb.co/qLQcG9vr/Whats-App-Image-2026-08-26-at-11-29-58.jpg" alt="KAAF Group Logo" class="w-full h-full object-cover rounded-xl" onerror="this.src='https://placehold.co/100x100/0A4C86/ffffff?text=KAAF'">
+                </div>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-base font-black text-white tracking-wide font-ibm">KAAF Group</span>
+                        <span class="px-2 py-0.5 rounded-full bg-kaaf-cyan/20 text-kaaf-cyanLight text-[10px] font-extrabold border border-kaaf-cyan/40">عرض فني تخصصي</span>
+                    </div>
+                    <p class="text-[11px] text-gray-400 font-medium">منظومة التسويق الرقمي المتكاملة • Digital Marketing Suite</p>
+                </div>
+            </div>
+
+            <!-- Anchor Links -->
+            <nav class="hidden lg:flex items-center gap-5 text-xs font-bold text-gray-300">
+                <a href="#intro" class="nav-link hover:text-white">المقدمة والرؤية</a>
+                <a href="#seo" class="nav-link hover:text-white">محركات البحث SEO</a>
+                <a href="#geo" class="nav-link hover:text-white text-emerald-400"><i class="fa-solid fa-sparkles text-xs ml-1"></i> البحث التوليدي GEO</a>
+                <a href="#design" class="nav-link hover:text-white">الهوية والتصاميم</a>
+                <a href="#social" class="nav-link hover:text-white">إدارة السوشيال ميديا</a>
+                <a href="#paid-ads" class="nav-link hover:text-white">الإعلانات الممولة</a>
+                <a href="#synergy" class="nav-link hover:text-white">تكامل المنظومة</a>
+                <a href="#quality" class="nav-link hover:text-white">ضمان الجودة</a>
+                <a href="#deliverables" class="nav-link hover:text-white">المخرجات والتقارير</a>
+            </nav>
+
+            <!-- WhatsApp Action Button (Left in RTL) -->
+            <div class="flex items-center gap-2 order-last">
+                <a href="https://wa.me/966537553910" target="_blank" class="px-3.5 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold flex items-center gap-1.5 transition">
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                    <span>تواصل معنا</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Document Content Container -->
+    <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-20">
+
+        <!-- ========================================================================= -->
+        <!-- 00 — PROPOSAL HERO BANNER / COVER                                         -->
+        <!-- ========================================================================= -->
+        <section class="relative rounded-[32px] overflow-hidden p-8 sm:p-14 lg:p-16 bg-gradient-to-br from-kaaf-blueDeep/95 via-kaaf-darkSlate/95 to-kaaf-dark/95 border border-kaaf-cyan/40 shadow-web-card text-white backdrop-blur-lg">
+            <div class="kaaf-ribbon absolute top-0 left-0 right-0"></div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-8 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-kaaf-cyan/20 border border-kaaf-cyan/40 text-kaaf-cyanLight text-xs font-bold font-ibm">
+                        <i class="fa-solid fa-file-shield text-kaaf-cyan"></i>
+                        <span>وثيقة العرض الفني المتكامل • Technical Proposal</span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <span class="text-xs sm:text-sm font-bold text-gray-400 block tracking-wider uppercase font-ibm">Integrated Digital Performance Architecture</span>
+                        <h1 class="text-3xl sm:text-5xl font-black text-white leading-tight tracking-tight">
+                            منظومة متكاملة للتسويق الرقمي وتعزيز الانتشار والأداء
+                        </h1>
+                        <p class="text-base sm:text-lg font-bold text-transparent bg-clip-text bg-gradient-to-l from-kaaf-cyan via-kaaf-cyanLight to-kaaf-blueLight font-ibm">
+                            استراتيجية متكاملة تجمع بين تحسين محركات البحث، وتطوير الظهور الرقمي، وإدارة منصات التواصل الاجتماعي، والحملات الإعلانية المدفوعة
+                        </p>
+                    </div>
+
+                    <!-- Main Core Message Callout -->
+                    <div class="p-4 rounded-2xl bg-black/60 border-r-4 border-kaaf-cyan text-xs sm:text-sm text-slate-200 leading-relaxed font-medium">
+                        «نعمل على بناء حضور رقمي متكامل يساعد العلامة التجارية على الظهور أمام جمهورها المستهدف، وتسهيل اكتشاف خدماتها، وتعزيز الوعي بها، وتحسين تجربة العملاء، ودعم فرص النمو والمبيعات من خلال استراتيجية تسويقية مترابطة».
+                    </div>
+
+                    <!-- Meta Tags (No Prices) -->
+                    <div class="pt-2 grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+                        <div class="p-3 rounded-2xl bg-black/60 border border-white/10">
+                            <span class="text-gray-400 block text-[11px]">مقدم العرض</span>
+                            <span class="font-black text-white font-ibm">KAAF Group</span>
+                        </div>
+                        <div class="p-3 rounded-2xl bg-black/60 border border-kaaf-cyan/40">
+                            <span class="text-gray-400 block text-[11px]">الجهة المستهدفة</span>
+                            <span class="font-black text-kaaf-cyanLight font-ibm">العلامة التجارية الموقرة</span>
+                        </div>
+                        <div class="p-3 rounded-2xl bg-black/60 border border-white/10">
+                            <span class="text-gray-400 block text-[11px]">طبيعة الوثيقة</span>
+                            <span class="font-black text-kaaf-greenLight">عرض فني تخصصي</span>
+                        </div>
+                        <div class="p-3 rounded-2xl bg-black/60 border border-white/10">
+                            <span class="text-gray-400 block text-[11px]">نطاق الحلول</span>
+                            <span class="font-black text-kaaf-purpleLight">360° Digital Growth</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dual Brand Presentation Box with User's Client Logo -->
+                <div class="lg:col-span-4 flex justify-center">
+                    <div class="w-full space-y-4 p-6 rounded-3xl bg-kaaf-cardBg/90 border border-kaaf-cyan/40 shadow-2xl backdrop-blur-md">
+                        <div class="flex items-center justify-between pb-3 border-b border-white/10">
+                            <span class="text-xs font-black text-white flex items-center gap-2">
+                                <i class="fa-solid fa-handshake text-kaaf-cyan"></i>
+                                <span>شراكة النمو والريادة الرقمية</span>
+                            </span>
+                            <span class="text-[10px] text-kaaf-cyan font-mono font-bold">DIGITAL SUITE</span>
+                        </div>
+
+                        <!-- Brand Logos Container -->
+                        <div class="p-4 rounded-2xl bg-black/70 border border-white/10 flex items-center justify-around gap-3">
+                            <div class="text-center space-y-1">
+                                <div class="w-16 h-16 rounded-2xl overflow-hidden border border-kaaf-blueLight/50 p-0.5 bg-black mx-auto shadow-md">
+                                    <img src="https://i.ibb.co/qLQcG9vr/Whats-App-Image-2026-08-26-at-11-29-58.jpg" alt="KAAF Group" class="w-full h-full object-cover rounded-xl" onerror="this.src='https://placehold.co/100x100/0A4C86/ffffff?text=KAAF'">
+                                </div>
+                                <span class="text-[10px] font-bold text-gray-400 block">KAAF Group</span>
+                            </div>
+                            <div class="text-kaaf-cyan text-xl font-mono font-bold">✕</div>
+                            <div class="text-center space-y-1">
+                                <div class="w-16 h-16 rounded-2xl overflow-hidden border border-kaaf-cyan/50 p-0.5 bg-black mx-auto shadow-md flex items-center justify-center">
+                                    <img src="https://i.ibb.co/jvCBX3MH/2c8c74a2f3db11b223be074a78f611a3-tplv-tiktokx-cropcenter-1080-1080.jpg" alt="شعار العلامة التجارية" class="w-full h-full object-contain rounded-xl" onerror="this.parentElement.innerHTML='<div class=\'text-[10px] font-black text-white\'>Brand Logo</div>'">
+                                </div>
+                                <span class="text-[10px] font-bold text-kaaf-cyanLight block">العلامة التجارية</span>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2 text-xs text-gray-300">
+                            <div class="p-2.5 rounded-xl bg-kaaf-blue/20 border border-kaaf-blue/30 space-y-0.5">
+                                <span class="font-bold text-white flex items-center gap-1.5">
+                                    <i class="fa-solid fa-layer-group text-kaaf-cyanLight"></i>
+                                    ركائز المنظومة الخمس
+                                </span>
+                                <p class="text-[11px] text-gray-300">SEO • GEO (الذكاء الاصطناعي) • التصاميم والهوية • السوشيال ميديا • الحملات الممولة.</p>
+                            </div>
+                            <div class="p-2.5 rounded-xl bg-kaaf-green/20 border border-kaaf-green/30 space-y-0.5">
+                                <span class="font-bold text-kaaf-greenLight flex items-center gap-1.5">
+                                    <i class="fa-solid fa-bullseye text-kaaf-greenLight"></i>
+                                    الغاية الاستراتيجية
+                                </span>
+                                <p class="text-[11px] text-gray-300">تحويل التواجد الرقمي من مجرد منشورات متفرقة إلى محرك تدفق للعملاء المستهدفين.</p>
+                            </div>
+                        </div>
+
+                        <a href="#seo" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-kaaf-blue via-kaaf-cyan to-kaaf-green text-slate-950 font-black text-xs text-center block hover:brightness-110 transition shadow-md">
+                            استعراض تفاصيل نطاق العمل الفني
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 01 — INTRODUCTION: PHILOSOPHY OF DIGITAL INTEGRATION                      -->
+        <!-- ========================================================================= -->
+        <section id="intro" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3 py-1 rounded-full bg-kaaf-cyan/30 text-kaaf-cyanLight font-black text-xs border border-kaaf-cyan/50 flex items-center gap-1.5">
+                    <i class="fa-solid fa-compass text-[11px]"></i>
+                    <span>المقدمة</span>
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide flex items-center gap-2.5">
+                    <i class="fa-solid fa-lightbulb text-kaaf-cyanLight text-xl"></i>
+                    <span>فلسفة النجاح الرقمي: المنظومة المتكاملة مقابل الأنشطة المنفردة</span>
+                </h2>
+            </div>
+
+            <div class="web-card-blue rounded-3xl p-6 sm:p-10 space-y-6 border-2 border-kaaf-blue/40 shadow-web-card">
+                <p class="text-base sm:text-lg text-slate-200 leading-relaxed font-medium">
+                    في بيئة الأعمال الرقمية الحديثة وسريعة التغير، لم يعد النجاح الرقمي المستدام يتحقق عبر نشاط تسويقي منفرد أو مبادرات معزولة؛ فنشر التصاميم وحدها دون تهيئة محركات البحث يحرم العلامة من الباحثين الجادين، والاعتماد فقط على الإعلانات الممولة دون هوية بصرية ومحتوى ذي مصداقية يؤدي إلى هدر ميزانيات الاستحواذ.
+                </p>
+                <p class="text-sm sm:text-base text-gray-300 leading-relaxed">
+                    تقوم رؤية <strong>KAAF Group</strong> على مبدأ <strong>التكامل التسويقي الشامل (Integrated Marketing Engine)</strong>، الذي يربط بين خمسة مسارات تقنية وإبداعية متزامنة: جودة المحتوى التخصصي، قوة الظهور في محركات البحث الكلاسيكية والذكاء الاصطناعي، رقي الهوية البصرية، الإدارة الاحترافية للمجتمع الرقمي، والحملات الإعلانية فائقة الاستهداف.
+                </p>
+
+                <!-- Core Pillars Preview Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 pt-2">
+                    <div class="p-3.5 rounded-2xl bg-black/40 border border-white/10 text-center space-y-1">
+                        <i class="fa-solid fa-magnifying-glass text-kaaf-cyanLight text-base"></i>
+                        <span class="text-xs font-bold text-white block">SEO</span>
+                        <p class="text-[11px] text-gray-400">تصدر محركات البحث التقليدية في Google.</p>
+                    </div>
+                    <div class="p-3.5 rounded-2xl bg-black/40 border border-emerald-500/30 text-center space-y-1">
+                        <i class="fa-solid fa-brain text-emerald-400 text-base"></i>
+                        <span class="text-xs font-bold text-white block">GEO</span>
+                        <p class="text-[11px] text-gray-400">الظهور في عصر الذكاء الاصطناعي وChatGPT.</p>
+                    </div>
+                    <div class="p-3.5 rounded-2xl bg-black/40 border border-white/10 text-center space-y-1">
+                        <i class="fa-solid fa-palette text-kaaf-goldLight text-base"></i>
+                        <span class="text-xs font-bold text-white block">التصاميم والهوية</span>
+                        <p class="text-[11px] text-gray-400">بناء اتصال بصري مؤثر ومتناسق.</p>
+                    </div>
+                    <div class="p-3.5 rounded-2xl bg-black/40 border border-white/10 text-center space-y-1">
+                        <i class="fa-solid fa-hashtag text-kaaf-purpleLight text-base"></i>
+                        <span class="text-xs font-bold text-white block">السوشيال ميديا</span>
+                        <p class="text-[11px] text-gray-400">إدارة الحضور والتفاعل والمجتمع.</p>
+                    </div>
+                    <div class="p-3.5 rounded-2xl bg-black/40 border border-white/10 text-center space-y-1">
+                        <i class="fa-solid fa-bullhorn text-kaaf-roseLight text-base"></i>
+                        <span class="text-xs font-bold text-white block">الإعلانات الممولة</span>
+                        <p class="text-[11px] text-gray-400">الوصول السريع عبر TikTok وInstagram.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 02 — SERVICE 1: SEO (SEARCH ENGINE OPTIMIZATION)                          -->
+        <!-- ========================================================================= -->
+        <section id="seo" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3 py-1 rounded-full bg-kaaf-blue/30 text-kaaf-cyanLight font-black text-xs border border-kaaf-blue/50 flex items-center gap-1.5">
+                    <i class="fa-solid fa-magnifying-glass text-[11px]"></i>
+                    <span>الخدمة الأولى</span>
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide flex items-center gap-2.5">
+                    <i class="fa-solid fa-magnifying-glass-chart text-kaaf-cyanLight text-xl"></i>
+                    <span>تحسين محركات البحث (SEO Engine Optimization)</span>
+                </h2>
+            </div>
+
+            <div class="web-card-blue rounded-3xl p-6 sm:p-10 space-y-8 border-2 border-kaaf-blue/40 shadow-web-card">
+                <div class="flex items-center gap-3 pb-3 border-b border-kaaf-blue/40 text-kaaf-cyanLight font-bold text-sm">
+                    <div class="w-9 h-9 rounded-xl bg-kaaf-blue/40 flex items-center justify-center text-kaaf-cyanLight">
+                        <i class="fa-brands fa-google text-base"></i>
+                    </div>
+                    <span>اجعل علامتك التجارية حاضرة عندما يبحث العملاء عن خدماتك</span>
+                </div>
+
+                <p class="text-base sm:text-lg text-slate-200 leading-relaxed font-medium">
+                    إن SEO ليس مجرد إضافة كلمات مفتاحية عشوائية إلى صفحات الموقع، بل هو عملية هندسية متكاملة لتحسين بنية الموقع البرمجية، وإثراء محتواه، وضبط أدائه وسرعته، لتعزيز أرشفته وظهوره في صدارة نتائج محركات البحث التقليدية مثل <strong>Google</strong>، مما يجعله مصدراً مستداماً لتدفق العملاء ذوي النية الشرائية العالية.
+                </p>
+
+                <!-- SEO Detailed 7 Phases Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <!-- 1. Audit -->
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-blue/40 space-y-3">
+                        <div class="flex items-center gap-2 text-kaaf-cyanLight font-bold text-xs">
+                            <i class="fa-solid fa-stethoscope text-base"></i>
+                            <span class="text-white text-sm">1. التحليل والتدقيق الشامل (SEO Audit)</span>
+                        </div>
+                        <ul class="space-y-1.5 text-xs text-gray-300 leading-relaxed">
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>فحص بنية الموقع والصفحات وهيكليتها.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>مراجعة قابلية الزحف والفهرسة (Crawling & Indexing).</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>تحليل سرعة التحميل ومؤشرات تجربة المستخدم (Core Web Vitals).</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>كشف الأخطاء البرمجية والروابط المعطلة (404s).</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>مراجعة ملفات Sitemap.xml وRobots.txt وSchema Markup.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>إعداد تقرير فني بجميع الفجوات وأولويات المعالجة.</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- 2. Keyword Research -->
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-blue/40 space-y-3">
+                        <div class="flex items-center gap-2 text-kaaf-cyanLight font-bold text-xs">
+                            <i class="fa-solid fa-key text-base"></i>
+                            <span class="text-white text-sm">2. تحليل الكلمات المفتاحية (Keywords)</span>
+                        </div>
+                        <ul class="space-y-1.5 text-xs text-gray-300 leading-relaxed">
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>دراسة الكلمات المرتبطة بنشاط وخدمات العلامة التجارية.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>تحليل نية الباحث (معلوماتية، تجارية، تحويلية).</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>استخراج الكلمات طويلة الذيل (Long-tail Keywords).</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>تحليل الكلمات التي يستهدفها المنافسون المباشرون.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>بناء خريطة استهداف وتوزيع الكلمات (Keyword Mapping).</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>التركيز على الكلمات ذات الجدوى التجارية الفعلية.</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- 3. On-Page SEO -->
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-blue/40 space-y-3">
+                        <div class="flex items-center gap-2 text-kaaf-cyanLight font-bold text-xs">
+                            <i class="fa-solid fa-code text-base"></i>
+                            <span class="text-white text-sm">3. التحسين الداخلي (On-Page SEO)</span>
+                        </div>
+                        <ul class="space-y-1.5 text-xs text-gray-300 leading-relaxed">
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>تحسين وصياغة عناوين الصفحات (Title Tags).</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>كتابة الأوصاف التعريفية الجاذبة (Meta Descriptions).</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>تنظيم تسلسل العناوين الرئيسية والفرعية (H1, H2, H3).</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>توزيع الكلمات المفتاحية في المحتوى بصورة طبيعية وسلسة.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>ضغط وتسمية الصور وإضافة نصوص Alt Text التوضيحية.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>تحسين بنية الروابط وعناوين URL لتكون واضحة وقصيرة.</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- 4. Technical SEO -->
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-blue/40 space-y-3">
+                        <div class="flex items-center gap-2 text-kaaf-cyanLight font-bold text-xs">
+                            <i class="fa-solid fa-gears text-base"></i>
+                            <span class="text-white text-sm">4. التحسين الفني (Technical SEO)</span>
+                        </div>
+                        <ul class="space-y-1.5 text-xs text-gray-300 leading-relaxed">
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>معالجة معوقات فهرسة الصفحات من قِبل روبوتات جوجل.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>تحسين سرعة استجابة السيرفر وأكواد التنسيق.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>التوافق التام مع فهارس الجوال (Mobile-First Indexing).</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>تطبيق الوسوم الأساسية وروابط Canonical Tags لتفادي التكرار.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>ضبط وتحديث قواعد إعادة التوجيه 301 Redirects.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>المتابعة التقنية المستمرة عبر Google Search Console.</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- 5. Content Strategy -->
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-blue/40 space-y-3">
+                        <div class="flex items-center gap-2 text-kaaf-cyanLight font-bold text-xs">
+                            <i class="fa-solid fa-newspaper text-base"></i>
+                            <span class="text-white text-sm">5. استراتيجية المحتوى المتوافق (SEO Content)</span>
+                        </div>
+                        <ul class="space-y-1.5 text-xs text-gray-300 leading-relaxed">
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>إعداد خريطة موضوعات شاملة تجيب عن تساؤلات العملاء.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>تطوير وإثراء صفحات الخدمات والمنتجات الرئيسية.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>تنظيم الموضوعات ضمن عناقيد موضوعية (Topic Clusters).</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>تحديث المحتوى القائم بدلاً من تكرار إنشاء صفحات جديدة.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>دعم مصداقية المحتوى طبقاً لمعايير جوجل للجودة (E-E-A-T).</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- 6. Off-Page & Reputation -->
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-blue/40 space-y-3">
+                        <div class="flex items-center gap-2 text-kaaf-cyanLight font-bold text-xs">
+                            <i class="fa-solid fa-link text-base"></i>
+                            <span class="text-white text-sm">6. السمعة والروابط الخارجية (Off-Page SEO)</span>
+                        </div>
+                        <ul class="space-y-1.5 text-xs text-gray-300 leading-relaxed">
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>تحليل ملف الروابط الخلفية الحالي (Backlinks Profile).</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>تقييم جودة المصادر وموثوقية النطاقات المشيرة للموقع.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>دراسة فرص الحصول على إشارات في منصات متخصصة وموثوقة.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>تعزيز اتساق بيانات العلامة (NAP) عبر الأدلة الرقمية.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight mt-0.5"></i> <span>تجنب الممارسات العشوائية أو الروابط المزعجة (Spam).</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 7. Monitoring & Added Value Banner -->
+                <div class="p-5 rounded-2xl bg-kaaf-blue/20 border border-kaaf-cyan/40 space-y-3">
+                    <div class="flex items-center justify-between pb-2 border-b border-white/10">
+                        <span class="text-xs font-bold text-kaaf-cyanLight flex items-center gap-2">
+                            <i class="fa-solid fa-chart-line"></i>
+                            7. المتابعة والقياس والتقارير المستمرة
+                        </span>
+                        <span class="text-[10px] font-mono text-gray-400">Continuous Monitoring</span>
+                    </div>
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        متابعة دقيقة لتطور ترتيب الكلمات المستهدفة، تحليل حجم الزيارات العضوية (Organic Traffic)، مراقبة مرات الظهور والنقرات، ورصد الصفحات الأعلى أداءً، مع تقديم تقارير دورية قياسية تتضمن تحليلات واضحة وتوصيات مستمرة.
+                    </p>
+                    <div class="p-3 rounded-xl bg-black/50 border border-white/10 text-xs text-slate-200">
+                        <strong class="text-kaaf-cyanLight">القيمة المضافة لخدمة SEO:</strong> بناء أصل رقمي مستدام للعلامة التجارية يقلل الاعتماد على الإعلانات الممولة وحدها، ويوجه المشترين الجادين مباشرة إلى خدماتكم في اللحظة التي يبحثون عنها.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 03 — SERVICE 2: GEO (GENERATIVE ENGINE OPTIMIZATION)                      -->
+        <!-- ========================================================================= -->
+        <section id="geo" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3 py-1 rounded-full bg-emerald-950 text-emerald-400 font-black text-xs border border-emerald-500/40 flex items-center gap-1.5">
+                    <i class="fa-solid fa-brain text-[11px]"></i>
+                    <span>الخدمة الثانية • منهجية البحث الحديثة</span>
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide flex items-center gap-2.5">
+                    <i class="fa-solid fa-sparkles text-emerald-400 text-xl"></i>
+                    <span>تحسين الظهور في محركات البحث التوليدي (GEO)</span>
+                </h2>
+            </div>
+
+            <div class="web-card-purple rounded-3xl p-6 sm:p-10 space-y-8 border-2 border-emerald-500/40 shadow-glow-purple">
+                <div class="flex items-center gap-3 pb-3 border-b border-emerald-500/30 text-emerald-300 font-bold text-sm">
+                    <div class="w-9 h-9 rounded-xl bg-emerald-500/20 flex items-center justify-center text-emerald-400">
+                        <i class="fa-solid fa-microchip text-base"></i>
+                    </div>
+                    <span>لا تجعل علامتك التجارية حاضرة في نتائج Google فقط، بل هيّئ معلوماتها لتكون مفهومة في عصر البحث بالذكاء الاصطناعي</span>
+                </div>
+
+                <p class="text-base sm:text-lg text-slate-200 leading-relaxed font-medium">
+                    يُمثل <strong>GEO (Generative Engine Optimization)</strong> الثورة الأحدث في التسويق الرقمي؛ حيث يركز على إعادة هيكلة وتنظيم المعلومات الرقمية والمحتوى المؤسسي للعلامة التجارية لتكون مفهومة، واضحة، وموثوقة بالنسبة لأنظمة الذكاء الاصطناعي ومحركات البحث التوليدي مثل <strong>ChatGPT, Google Gemini</strong> ومنصات الإجابة الذكية، مما يرفع احتمالية الاستشهاد بمعلومات العلامة التجارية وترشيحها في إجابات الذكاء الاصطناعي للمستخدمين.
+                </p>
+
+                <!-- GEO 6 Pillars Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <!-- Pillar 1 -->
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-purple-500/30 space-y-2">
+                        <div class="flex items-center gap-2 text-purple-300 font-bold text-xs">
+                            <i class="fa-solid fa-radar text-base"></i>
+                            <span class="text-white text-sm">1. تحليل الظهور الرقمي التوليدي</span>
+                        </div>
+                        <ul class="space-y-1.5 text-xs text-gray-300 leading-relaxed">
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-purple-300 mt-0.5"></i> <span>فحص ما تعرفه نماذج الذكاء الاصطناعي عن العلامة حالياً.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-purple-300 mt-0.5"></i> <span>تحليل وضوح نشاط وهوية العلامة عبر الويب المفتوح.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-purple-300 mt-0.5"></i> <span>رصد مدى اتساق البيانات والخدمات عبر المنصات الرقمية.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-purple-300 mt-0.5"></i> <span>تحديد فجوات الفهم المعرفي لدى خوارزميات الـ AI.</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Pillar 2 -->
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-purple-500/30 space-y-2">
+                        <div class="flex items-center gap-2 text-purple-300 font-bold text-xs">
+                            <i class="fa-solid fa-comments-question-check text-base"></i>
+                            <span class="text-white text-sm">2. تحليل استفسارات الجمهور (Prompts)</span>
+                        </div>
+                        <ul class="space-y-1.5 text-xs text-gray-300 leading-relaxed">
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-purple-300 mt-0.5"></i> <span>دراسة الأسئلة المعقدة التي يطرحها المستخدمون على ChatGPT وGemini.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-purple-300 mt-0.5"></i> <span>تحليل الاستفسارات التجارية والبحث عن الحلول والبدائل.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-purple-300 mt-0.5"></i> <span>إعداد بنك أسئلة استراتيجي يغطي كافة تفاصيل الخدمة.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-purple-300 mt-0.5"></i> <span>ربط الاستفسارات الذكية بإجابات نموذجية في صفحات الموقع.</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Pillar 3 -->
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-purple-500/30 space-y-2">
+                        <div class="flex items-center gap-2 text-purple-300 font-bold text-xs">
+                            <i class="fa-solid fa-file-pen text-base"></i>
+                            <span class="text-white text-sm">3. تحسين المحتوى للبحث التوليدي</span>
+                        </div>
+                        <ul class="space-y-1.5 text-xs text-gray-300 leading-relaxed">
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-purple-300 mt-0.5"></i> <span>إعادة صياغة المعلومات لتكون مباشرة وموجزة وقابلة للاقتباس.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-purple-300 mt-0.5"></i> <span>تقديم إجابات قاطعة ودقيقة عن أسئلة الأسعار والمواصفات.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-purple-300 mt-0.5"></i> <span>استخدام العناوين الاستفهامية والتسلسل المنطقي للمعلومة.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-purple-300 mt-0.5"></i> <span>دعم البيانات بالأدلة الفنية لتقليل الغموض والتناقض.</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Pillar 4 -->
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-purple-500/30 space-y-2">
+                        <div class="flex items-center gap-2 text-purple-300 font-bold text-xs">
+                            <i class="fa-solid fa-id-card-clip text-base"></i>
+                            <span class="text-white text-sm">4. تحسين الكيان الرقمي (Entity Optimization)</span>
+                        </div>
+                        <ul class="space-y-1.5 text-xs text-gray-300 leading-relaxed">
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-purple-300 mt-0.5"></i> <span>ترسيخ اسم العلامة وهوية مؤسسها وخدماتها ككيان معرفي موحد (Knowledge Graph Entity).</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-purple-300 mt-0.5"></i> <span>تطبيق البيانات المنظمة المتقدمة (JSON-LD Schemas).</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-purple-300 mt-0.5"></i> <span>توحيد الوصف المؤسسي عبر كافة المراجع والمنصات الخارجية.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-purple-300 mt-0.5"></i> <span>بناء رابط معرفي وثيق بين اسم العلامة ومجال تخصصها الدقيق.</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Pillar 5 -->
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-purple-500/30 space-y-2">
+                        <div class="flex items-center gap-2 text-purple-300 font-bold text-xs">
+                            <i class="fa-solid fa-book-bookmark text-base"></i>
+                            <span class="text-white text-sm">5. بناء المحتوى المرجعي والمصادر</span>
+                        </div>
+                        <ul class="space-y-1.5 text-xs text-gray-300 leading-relaxed">
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-purple-300 mt-0.5"></i> <span>إنشاء صفحات تعريفية شاملة تجيب عن كافة الجوانب الفنية.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-purple-300 mt-0.5"></i> <span>تضمين أقسام متخصصة للأسئلة الشائعة والمعايير القياسية.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-purple-300 mt-0.5"></i> <span>جعل المحتوى مرجعاً سهلاً تستند إليه أدوات البحث الذكي.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-purple-300 mt-0.5"></i> <span>تعزيز حضور العلامة في الموسوعات والمنصات ذات المصداقية العالية.</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Pillar 6 -->
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-purple-500/30 space-y-2">
+                        <div class="flex items-center gap-2 text-purple-300 font-bold text-xs">
+                            <i class="fa-solid fa-chart-network text-base"></i>
+                            <span class="text-white text-sm">6. قياس ومتابعة أداء GEO</span>
+                        </div>
+                        <ul class="space-y-1.5 text-xs text-gray-300 leading-relaxed">
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-purple-300 mt-0.5"></i> <span>اختبار ورصد كيفية ظهور العلامة عند توجيه Prompts متخصصة.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-purple-300 mt-0.5"></i> <span>تحليل دقة المعلومات التي تسردها نماذج الـ AI عن الشركة.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-purple-300 mt-0.5"></i> <span>رصد فرص التعديل والتحسين المستمر لمصادر البيانات.</span></li>
+                            <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-purple-300 mt-0.5"></i> <span>تقديم تقارير ورؤى استراتيجية حول الحضور التوليدي.</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Visual Comparison Table: SEO vs GEO -->
+                <div class="overflow-x-auto rounded-2xl border-2 border-emerald-500/40 shadow-lg bg-kaaf-darkSlate/90">
+                    <table class="w-full text-right text-xs sm:text-sm">
+                        <thead class="bg-black/80 text-gray-200 border-b border-white/10 font-bold">
+                            <tr>
+                                <th class="p-4 w-1/4">وجه المقارنة</th>
+                                <th class="p-4 w-3/8 text-kaaf-cyanLight">محركات البحث التقليدية (SEO)</th>
+                                <th class="p-4 w-3/8 text-emerald-400">محركات البحث التوليدي والذكاء الاصطناعي (GEO)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-white/10 text-gray-300">
+                            <tr>
+                                <td class="p-4 font-bold text-white">الهدف الجوهري</td>
+                                <td class="p-4">تحسين الظهور وتصدر نتائج البحث الكلاسيكية.</td>
+                                <td class="p-4">تحسين فهم المحتوى والاستفادة منه في إجابات وتوصيات الذكاء الاصطناعي.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-bold text-white">محور التركيز</td>
+                                <td class="p-4">الكلمات المفتاحية، الصفحات، الروابط، وفهارس الزحف.</td>
+                                <td class="p-4">الكيانات المعرفية (Entities)، السياق، الإجابات المباشرة، والموثوقية.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-bold text-white">طريقة عرض النتيجة</td>
+                                <td class="p-4">قائمة من الروابط والمواقع الزرقاء في صفحة النتائج.</td>
+                                <td class="p-4">إجابة مركبة ومختصرة تولدها النماذج مع الاستشهاد بالمصادر الموثوقة.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-bold text-white">المنصات المستهدفة</td>
+                                <td class="p-4 font-ibm text-kaaf-cyanLight">Google, Bing, Yahoo</td>
+                                <td class="p-4 font-ibm text-emerald-400">ChatGPT, Google Gemini, Perplexity, Copilot</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Professional Integrity Disclaimer for AI -->
+                <div class="p-4 rounded-2xl bg-black/60 border border-emerald-500/30 text-xs text-slate-300 flex items-start gap-3">
+                    <i class="fa-solid fa-circle-exclamation text-emerald-400 text-base mt-0.5 shrink-0"></i>
+                    <p class="leading-relaxed">
+                        <strong>إقرار المصداقية التقنية:</strong> تلتزم KAAF Group بتطبيق أرقى معايير تهيئة البيانات الرقمية (Entity & Structured Data)؛ ولا يقدم هذا العرض أي ضمانات قطعية بظهور العلامة في إجابة محددة أو ترشيحها حصرياً من ChatGPT أو Gemini، حيث تخضع الخوارزميات ونماذج اللغة الكبيرة (LLMs) لمعالجات ومصادر بيانات خارجية متغيرة.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 04 — SERVICE 3: DESIGN & BRAND VISUAL IDENTITY FOR CONTENT                -->
+        <!-- ========================================================================= -->
+        <section id="design" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3 py-1 rounded-full bg-kaaf-gold/30 text-kaaf-goldLight font-black text-xs border border-kaaf-gold/50 flex items-center gap-1.5">
+                    <i class="fa-solid fa-palette text-[11px]"></i>
+                    <span>الخدمة الثالثة</span>
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide flex items-center gap-2.5">
+                    <i class="fa-solid fa-wand-magic-sparkles text-kaaf-gold text-xl"></i>
+                    <span>تطوير التصاميم والهوية البصرية للمحتوى (Visual Branding & Creatives)</span>
+                </h2>
+            </div>
+
+            <div class="web-card-gold rounded-3xl p-6 sm:p-10 space-y-6 border-2 border-kaaf-gold/40 shadow-web-card">
+                <div class="flex items-center gap-3 pb-3 border-b border-kaaf-gold/30 text-kaaf-goldLight font-bold text-sm">
+                    <div class="w-9 h-9 rounded-xl bg-kaaf-gold/20 flex items-center justify-center text-kaaf-gold">
+                        <i class="fa-solid fa-bezier-curve text-base"></i>
+                    </div>
+                    <span>التصميم ليس مجرد شكل جذاب، بل وسيلة لبناء هوية واتصال بصري مؤثر</span>
+                </div>
+
+                <p class="text-base sm:text-lg text-slate-200 leading-relaxed font-medium">
+                    يُعد التصميم التسويقي الركيزة الأساسية في تشكيل انطباع الجمهور الأول عن العلامة التجارية. لا تقتصر رؤيتنا على إعداد تصاميم جديدة فحسب، بل تمتد إلى <strong>فحص وتطوير وتجويد المواد البصرية الحالية</strong>، لضمان أن تجمع التصاميم بين الجاذبية العصرية، وضوح الرسالة الإعلانية، والاتساق الصارم مع هوية العلامة التجارية.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <!-- 1. Identity Study -->
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-gold/30 space-y-2">
+                        <span class="font-bold text-white text-xs flex items-center gap-2">
+                            <i class="fa-solid fa-swatchbook text-kaaf-gold"></i>
+                            1. دراسة الهوية البصرية ودليل الأسلوب
+                        </span>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            تحليل الشعار، دراسة دلالات الألوان، الخطوط الطباعية، وتحديد أسلوب بصري موحد (Visual Style Guide) يضمن تناسق كافة المواد عبر مختلف المنصات الرقمية.
+                        </p>
+                    </div>
+
+                    <!-- 2. Audit & Enhance Current Creatives -->
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-gold/30 space-y-2">
+                        <span class="font-bold text-white text-xs flex items-center gap-2">
+                            <i class="fa-solid fa-arrow-up-right-dots text-kaaf-gold"></i>
+                            2. تدقيق وتطوير التصاميم الحالية
+                        </span>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            مراجعة المواد المنشورة سابقاً، معالجة نقاط الضعف في التكوين البصري وتوزيع المساحات، رفع التباين اللوني، وتحسين مقروئية النصوص والرسائل المهمة.
+                        </p>
+                    </div>
+
+                    <!-- 3. Marketing Creatives Design -->
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-gold/30 space-y-2">
+                        <span class="font-bold text-white text-xs flex items-center gap-2">
+                            <i class="fa-solid fa-shapes text-kaaf-gold"></i>
+                            3. تصميم المحتوى التسويقي والإعلاني
+                        </span>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            ابتكار بوستات تعريفية بالخدمات، منشورات تثقيفية وتوعوية، تصاميم العروض الموسمية، وأغلفة المنصات وقوالب الستوري وفق هوية متكاملة.
+                        </p>
+                    </div>
+
+                    <!-- 4. Video & Motion Creatives -->
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-gold/30 space-y-2">
+                        <span class="font-bold text-white text-xs flex items-center gap-2">
+                            <i class="fa-solid fa-film text-kaaf-gold"></i>
+                            4. تطوير المحتوى المرئي للفيديو القصير
+                        </span>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            ابتكار الأفكار البصرية لمقاطع الفيديو القصيرة، تصميم الأغلفة الجذابة (Thumbnails)، تنسيق الخطوط والمؤثرات النصية والرسوم التوضيحية داخل الفيديو.
+                        </p>
+                    </div>
+
+                    <!-- 5. Platform Specific Specs -->
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-gold/30 space-y-2 md:col-span-2 lg:col-span-2">
+                        <span class="font-bold text-white text-xs flex items-center gap-2">
+                            <i class="fa-solid fa-crop-simple text-kaaf-gold"></i>
+                            5. مراعاة الخصوصية البصرية لكل منصة رقمية
+                        </span>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            تخصيص الأبعاد والمقاسات بما يلائم الشاشات العمودية للهواتف الذكية (9:16 للريلز وتيك توك، 1:1 و 4:5 لإنستغرام)، وضمان عدم تداخل النصوص مع عناصر واجهات التطبيقات، وتوفير تجربة مشاهدة مريحة ومبهرة للعين.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-black/60 border border-white/10 text-xs text-gray-300 leading-relaxed">
+                    <strong class="text-kaaf-goldLight">القيمة المضافة:</strong> بناء صورة بصرية استثنائية تعكس الاحترافية، وتزيد من معدل تذكر العلامة التجارية (Brand Recall)، وترفع مستوى التفاعل مع المنشورات الإعلانية والتثقيفية.
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 05 — SERVICE 4: SOCIAL MEDIA MANAGEMENT                                   -->
+        <!-- ========================================================================= -->
+        <section id="social" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3 py-1 rounded-full bg-kaaf-purple/30 text-kaaf-purpleLight font-black text-xs border border-kaaf-purple/50 flex items-center gap-1.5">
+                    <i class="fa-solid fa-users text-[11px]"></i>
+                    <span>الخدمة الرابعة</span>
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide flex items-center gap-2.5">
+                    <i class="fa-solid fa-hashtag text-kaaf-purpleLight text-xl"></i>
+                    <span>إدارة حسابات التواصل الاجتماعي (Social Media Management)</span>
+                </h2>
+            </div>
+
+            <div class="web-card-purple rounded-3xl p-6 sm:p-10 space-y-8 border-2 border-kaaf-purple/40 shadow-web-card">
+                <div class="flex items-center gap-3 pb-3 border-b border-kaaf-purple/40 text-kaaf-purpleLight font-bold text-sm">
+                    <div class="w-9 h-9 rounded-xl bg-kaaf-purple/20 flex items-center justify-center text-kaaf-purpleLight">
+                        <i class="fa-solid fa-chart-network text-base"></i>
+                    </div>
+                    <span>إدارة متكاملة لحضور العلامة التجارية من التخطيط إلى النشر والتحليل</span>
+                </div>
+
+                <p class="text-base sm:text-lg text-slate-200 leading-relaxed font-medium">
+                    إن إدارة السوشيال ميديا هي عملية بناء علاقة يومية مستمرة مع العملاء؛ تبدأ من الفهم العميق لاهتمامات الجمهور، وتمر بصياغة المحتوى المتخصص، وتنتهي بالتفاعل الاحترافي والتحليل الرقمي المستمر لدعم توجهات النمو.
+                </p>
+
+                <!-- Detailed 7 Functional Areas -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <!-- 1 -->
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-purple/30 space-y-2">
+                        <span class="font-bold text-white text-xs flex items-center gap-2">
+                            <i class="fa-solid fa-magnifying-glass-chart text-kaaf-purpleLight"></i>
+                            1. تقييم الوضع الحالي والمنافسين
+                        </span>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            مراجعة الحسابات القائمة، تقييم معدلات التفاعل السابقة، فحص البايو والروابط، ودراسة وتحليل استراتيجيات المنافسين المباشرين في السوق.
+                        </p>
+                    </div>
+
+                    <!-- 2 -->
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-purple/30 space-y-2">
+                        <span class="font-bold text-white text-xs flex items-center gap-2">
+                            <i class="fa-solid fa-compass-drafting text-kaaf-purpleLight"></i>
+                            2. بناء استراتيجية وركائز المحتوى
+                        </span>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            تحديد أهداف التواجد، تصنيف محاور المحتوى (Content Pillars)، ضبط نبرة الصوت (Tone of Voice)، وتوزيع الرسائل بين التوعية، التفاعل، والترويج.
+                        </p>
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-purple/30 space-y-2">
+                        <span class="font-bold text-white text-xs flex items-center gap-2">
+                            <i class="fa-solid fa-pen-fancy text-kaaf-purpleLight"></i>
+                            3. صناعة المحتوى والكتابة الإبداعية
+                        </span>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            صياغة الكابشن والنصوص التسويقية (Copywriting)، كتابة العناوين الخاطفة (Hooks)، وتضمين دعوات اتخاذ الإجراء (CTA) والهاشتاجات الموجهة.
+                        </p>
+                    </div>
+
+                    <!-- 4 -->
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-purple/30 space-y-2">
+                        <span class="font-bold text-white text-xs flex items-center gap-2">
+                            <i class="fa-solid fa-palette text-kaaf-purpleLight"></i>
+                            4. الإنتاج والتصميم الإبداعي
+                        </span>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            تنفيذ التصاميم الجرافيكية والقصص والمواد المرئية المعتمدة وفق خطة النشر بما يعكس الهوية المؤسسية المعتمدة للعلامة التجارية.
+                        </p>
+                    </div>
+
+                    <!-- 5 -->
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-purple/30 space-y-2">
+                        <span class="font-bold text-white text-xs flex items-center gap-2">
+                            <i class="fa-solid fa-calendar-days text-kaaf-purpleLight"></i>
+                            5. تخطيط وجدولة النشر
+                        </span>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            إعداد تقويم شهري واضح للنشر، اعتماد المواعيد في أوقات ذروة تفاعل الجمهور المستهدف، وجدولة المنشورات لضمان الاستمرارية التامة.
+                        </p>
+                    </div>
+
+                    <!-- 6 -->
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-purple/30 space-y-2">
+                        <span class="font-bold text-white text-xs flex items-center gap-2">
+                            <i class="fa-solid fa-comments text-kaaf-purpleLight"></i>
+                            6. إدارة المجتمع الرقمي والتفاعل
+                        </span>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            متابعة الرد على التعليقات والرسائل وفق الإجابات المعتمدة وأوقات العمل المتفق عليها، وتصعيد الاستفسارات التخصصية والفرص الجادة لإدارة العميل.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 7. Analysis Banner -->
+                <div class="p-5 rounded-2xl bg-black/40 border border-kaaf-purple/40 space-y-2">
+                    <span class="text-xs font-bold text-kaaf-purpleLight block">7. التحليل الدوري وتطوير الاستراتيجية:</span>
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        رصد دقيق لمعدلات الوصول (Reach)، الانطباعات، نمو المتابعين، وتحديد أكثر الموضوعات جذباً لاهتمام الجمهور، واستثمار البيانات في التطوير المستمر لخطة المحتوى الشهرية.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 06 — SERVICE 5: PAID ADS MANAGEMENT (TIKTOK & INSTAGRAM)                  -->
+        <!-- ========================================================================= -->
+        <section id="paid-ads" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3 py-1 rounded-full bg-kaaf-rose/30 text-kaaf-roseLight font-black text-xs border border-kaaf-rose/50 flex items-center gap-1.5">
+                    <i class="fa-solid fa-bullhorn text-[11px]"></i>
+                    <span>الخدمة الخامسة</span>
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide flex items-center gap-2.5">
+                    <i class="fa-solid fa-rectangle-ad text-kaaf-roseLight text-xl"></i>
+                    <span>إدارة الحملات الإعلانية المدفوعة (TikTok & Instagram Ads)</span>
+                </h2>
+            </div>
+
+            <div class="web-card-blue rounded-3xl p-6 sm:p-10 space-y-8 border-2 border-kaaf-rose/40 shadow-web-card">
+                <div class="flex items-center gap-3 pb-3 border-b border-kaaf-rose/30 text-kaaf-roseLight font-bold text-sm">
+                    <div class="w-9 h-9 rounded-xl bg-kaaf-rose/20 flex items-center justify-center text-kaaf-roseLight">
+                        <i class="fa-solid fa-chart-mixed text-base"></i>
+                    </div>
+                    <span>الوصول إلى الجمهور المناسب وتحويل الميزانية الإعلانية إلى فرص قابلة للقياس</span>
+                </div>
+
+                <p class="text-base sm:text-lg text-slate-200 leading-relaxed font-medium">
+                    إن إدارة الحملات الإعلانية الاحترافية لا تعني مجرد الضغط على زر ترويج المنشور؛ بل تتطلب استراتيجية استهداف متقدمة، هندسة قنوات التحويل (Funnels)، اختبار مستمر للرسائل الإبداعية، وتحليلاً دقيقاً لكل ريال يُنفق لتعظيم العائد وتحقيق أهداف العلامة التجارية.
+                </p>
+
+                <!-- Platform 1 & 2 Dual Showcase -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                    <!-- TikTok Ads Track -->
+                    <div class="p-6 sm:p-8 rounded-3xl bg-kaaf-darkSlate/95 border-2 border-cyan-500/40 space-y-5">
+                        <div class="flex items-center justify-between pb-3 border-b border-white/10">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-cyan-950 text-cyan-400 flex items-center justify-center text-xl border border-cyan-500/40">
+                                    <i class="fa-brands fa-tiktok"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-base font-black text-white">أولاً: إدارة الحملات الإعلانية على TikTok</h3>
+                                    <span class="text-[11px] text-cyan-400">Vertical Video Advertising & Viral Reach</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3 text-xs text-gray-300">
+                            <div class="p-3 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                                <span class="font-bold text-white block">1. دراسة النشاط والجمهور على TikTok:</span>
+                                <p class="text-[11px] text-gray-400">تحديد اهتمامات وسلوك الفئات العمرية المستهدفة وطبيعة المحتوى السريع المتفاعل معه في المنصة.</p>
+                            </div>
+                            <div class="p-3 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                                <span class="font-bold text-white block">2. اختيار الأهداف الإعلانية المناسبة:</span>
+                                <p class="text-[11px] text-gray-400">حملات الوصول، مشاهدات الفيديو، توجيه الزيارات للموقع، أو جمع بيانات العملاء (Lead Generation).</p>
+                            </div>
+                            <div class="p-3 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                                <span class="font-bold text-white block">3. إعداد الحسابات وهندسة الحملات:</span>
+                                <p class="text-[11px] text-gray-400">تنظيم المجموعات الإعلانية، ضبط الاستهداف الديموغرافي والجغرافي، وربط تتبع الـ TikTok Pixel.</p>
+                            </div>
+                            <div class="p-3 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                                <span class="font-bold text-white block">4. تطوير المحتوى الإعلاني المتخصص:</span>
+                                <p class="text-[11px] text-gray-400">كتابة Hooks قوية في الثواني الثلاث الأولى، وصياغة دعوات واضحة لاتخاذ الإجراء بأسلوب TikTok الطبيعي.</p>
+                            </div>
+                            <div class="p-3 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                                <span class="font-bold text-white block">5. المتابعة والتحسين اللحظي:</span>
+                                <p class="text-[11px] text-gray-400">تحليل معدل إكمال الفيديو (Video Completion Rate)، تكلفة النقرة، واستبعاد الإعلانات الضعيفة.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Instagram Ads Track -->
+                    <div class="p-6 sm:p-8 rounded-3xl bg-kaaf-darkSlate/95 border-2 border-rose-500/40 space-y-5">
+                        <div class="flex items-center justify-between pb-3 border-b border-white/10">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-rose-950 text-rose-400 flex items-center justify-center text-xl border border-rose-500/40">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-base font-black text-white">ثانياً: إدارة الحملات الإعلانية على Instagram</h3>
+                                    <span class="text-[11px] text-rose-400">Meta Ads Manager • Feed, Stories & Reels</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3 text-xs text-gray-300">
+                            <div class="p-3 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                                <span class="font-bold text-white block">1. دراسة الجمهور ومواضع الظهور:</span>
+                                <p class="text-[11px] text-gray-400">تحديد الشرائح الراقية وتخصيص إعلانات مواضع الـ Feed والـ Stories والـ Reels بما يلائم كل موضع.</p>
+                            </div>
+                            <div class="p-3 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                                <span class="font-bold text-white block">2. تحديد صيغ وأنواع الحملات:</span>
+                                <p class="text-[11px] text-gray-400">حملات تعزيز الوعي، التفاعل، الرسائل والمحادثات المباشرة، وحملات التحويل والمبيعات للموقع الإلكتروني.</p>
+                            </div>
+                            <div class="p-3 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                                <span class="font-bold text-white block">3. تجهيز التصاميم والنصوص الإعلانية:</span>
+                                <p class="text-[11px] text-gray-400">تصميم كروت وبنرات إعلانية مبهرة، وصياغة نصوص تبرز القيمة التنافسية وتدعو للتفاعل الفوري.</p>
+                            </div>
+                            <div class="p-3 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                                <span class="font-bold text-white block">4. إعداد الجماهير المخصصة والشبيهة:</span>
+                                <p class="text-[11px] text-gray-400">بناء Custom Audiences للمتفاعلين وزوار الموقع، واستكشاف الجماهير المشابهة (Lookalike) عند توفر البيانات.</p>
+                            </div>
+                            <div class="p-3 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                                <span class="font-bold text-white block">5. التحسين المالي واختبار A/B Testing:</span>
+                                <p class="text-[11px] text-gray-400">مراقبة تكلفة النتيجة وتوزيع الميزانية نحو المجموعات الإعلانية الأكثر كفاءة لتعظيم العائد.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Shared KPIs Table -->
+                <div class="space-y-3">
+                    <span class="text-xs font-bold text-white block flex items-center gap-2">
+                        <i class="fa-solid fa-table-list text-kaaf-cyanLight"></i>
+                        <span>ثالثاً: مصفوفة القياس والتحليل الإعلاني المشترك (Key Ad Metrics)</span>
+                    </span>
+
+                    <div class="overflow-x-auto rounded-2xl border border-white/10 bg-kaaf-darkSlate/90">
+                        <table class="w-full text-right text-xs">
+                            <thead class="bg-black/60 text-gray-300 font-bold">
+                                <tr>
+                                    <th class="p-3.5 w-1/4">مؤشر الأداء (KPI)</th>
+                                    <th class="p-3.5 w-1/3">ما الذي يقيسه المؤشر فعلياً؟</th>
+                                    <th class="p-3.5">الأهمية الاستراتيجية للحملة</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-white/10 text-gray-300">
+                                <tr>
+                                    <td class="p-3 font-mono font-bold text-kaaf-cyanLight">Reach</td>
+                                    <td class="p-3">عدد الأشخاص الفريدين الذين وصل إليهم الإعلان.</td>
+                                    <td class="p-3 text-gray-400">قياس مدى اتساع رقعة انتشار الحملة.</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-mono font-bold text-kaaf-cyanLight">Impressions</td>
+                                    <td class="p-3">إجمالي عدد مرات ظهور الإعلان على شاشات المستخدمين.</td>
+                                    <td class="p-3 text-gray-400">قياس كثافة وتكرار الرسالة التسويقية.</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-mono font-bold text-kaaf-cyanLight">CTR (Click-Through Rate)</td>
+                                    <td class="p-3">نسبة النقر إلى الظهور (التفاعل مع الإعلان).</td>
+                                    <td class="p-3 text-gray-400">مقياس مدى جاذبية الفكرة الإبداعية والنص.</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-mono font-bold text-kaaf-cyanLight">CPC (Cost per Click)</td>
+                                    <td class="p-3">تكلفة النقرة الواحدة للزيارة أو التفاعل.</td>
+                                    <td class="p-3 text-gray-400">مقياس كفاءة استهداف الجمهور وجودة الإعلان.</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-mono font-bold text-kaaf-cyanLight">CPM</td>
+                                    <td class="p-3">تكلفة الوصول إلى كل ألف ظهور إعلاني.</td>
+                                    <td class="p-3 text-gray-400">مقياس تكلفة التنافس في المزاد الإعلاني.</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-mono font-bold text-kaaf-cyanLight">Video Views</td>
+                                    <td class="p-3">عدد مشاهدات الفيديو ومعدلات المشاهدة الكاملة.</td>
+                                    <td class="p-3 text-gray-400">قياس قوة المحتوى في استبقاء اهتمام المشاهد.</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-mono font-bold text-kaaf-cyanLight">Cost per Lead</td>
+                                    <td class="p-3">تكلفة الحصول على بيانات العميل المحتمل المهتم.</td>
+                                    <td class="p-3 text-gray-400">تقييم جدوى حملات جمع بيانات العملاء.</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-mono font-bold text-kaaf-cyanLight">Conversions</td>
+                                    <td class="p-3">الإجراءات النهائية والتحويلات المكتملة عبر الموقع.</td>
+                                    <td class="p-3 text-gray-400">مقياس الأثر التجاري والتحول البيعي المباشر.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-black/60 border border-white/10 text-xs text-slate-300">
+                    * ملاحظة تنظيمية: الميزانيات الإعلانية المدفوعة مباشرة للمنصات (Ad Spend) وأي اشتراكات بأدوات خارجية تخضع لتمويل العميل وموافقته المباشرة، ولا تفترض هذه الوثيقة الفنية شمولها ضمن خدمات الإدارة المتخصصة.
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 07 — INTEGRATION & SYNERGY: THE COMPLETE MARKETING ECOSYSTEM              -->
+        <!-- ========================================================================= -->
+        <section id="synergy" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3 py-1 rounded-full bg-kaaf-green/30 text-kaaf-greenLight font-black text-xs border border-kaaf-green/50 flex items-center gap-1.5">
+                    <i class="fa-solid fa-arrows-spin text-[11px]"></i>
+                    <span>التكامل التسويقي</span>
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide flex items-center gap-2.5">
+                    <i class="fa-solid fa-cubes-stacked text-kaaf-greenLight text-xl"></i>
+                    <span>تكامل الخدمات — منظومة تسويقية موحدة تعمل لتحقيق النمو</span>
+                </h2>
+            </div>
+
+            <div class="web-card-green rounded-3xl p-6 sm:p-10 space-y-8 border-2 border-kaaf-green/40 shadow-web-card">
+                <p class="text-sm sm:text-base text-gray-200 leading-relaxed font-medium">
+                    تعمل المسارات الخمسة كأجزاء متناسقة في محرك نمو واحد؛ حيث تدعم كل خدمة مسار الخدمة الأخرى لتغطية رحلة العميل بالكامل:
+                </p>
+
+                <!-- Ecosystem Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-cyan/40 text-center space-y-2">
+                        <div class="w-10 h-10 rounded-xl bg-kaaf-blue/30 text-kaaf-cyanLight flex items-center justify-center mx-auto text-lg">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <h4 class="text-xs font-black text-white font-ibm">محركات البحث SEO</h4>
+                        <p class="text-[11px] text-gray-300">يساعد العملاء على اكتشاف علامتكم عبر نتائج البحث التقليدية في Google.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-emerald-500/40 text-center space-y-2">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-950/40 text-emerald-400 flex items-center justify-center mx-auto text-lg">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h4 class="text-xs font-black text-white font-ibm">البحث التوليدي GEO</h4>
+                        <p class="text-[11px] text-gray-300">يهيئ المحتوى ليكون مفهوماً وقابلاً للاقتباس في عصر الذكاء الاصطناعي.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-gold/40 text-center space-y-2">
+                        <div class="w-10 h-10 rounded-xl bg-kaaf-gold/20 text-kaaf-gold flex items-center justify-center mx-auto text-lg">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+                        <h4 class="text-xs font-black text-white font-ibm">تطوير التصاميم</h4>
+                        <p class="text-[11px] text-gray-300">يعزز الهوية البصرية ويجعل الرسائل التسويقية واضحة وجذابة ومؤثرة.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-purple/40 text-center space-y-2">
+                        <div class="w-10 h-10 rounded-xl bg-kaaf-purple/30 text-kaaf-purpleLight flex items-center justify-center mx-auto text-lg">
+                            <i class="fa-solid fa-hashtag"></i>
+                        </div>
+                        <h4 class="text-xs font-black text-white font-ibm">إدارة السوشيال ميديا</h4>
+                        <p class="text-[11px] text-gray-300">تبني حضوراً يومياً مستمراً وعلاقة متواصلة موثوقة مع جمهور العلامة.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-rose/40 text-center space-y-2">
+                        <div class="w-10 h-10 rounded-xl bg-kaaf-rose/20 text-kaaf-roseLight flex items-center justify-center mx-auto text-lg">
+                            <i class="fa-solid fa-bullhorn"></i>
+                        </div>
+                        <h4 class="text-xs font-black text-white font-ibm">الحملات الإعلانية</h4>
+                        <p class="text-[11px] text-gray-300">تدعم الوصول المدفوع السريع وتحفز الزيارات والاستفسارات والتحويلات.</p>
+                    </div>
+                </div>
+
+                <!-- Customer Journey Visual Pathway -->
+                <div class="p-6 rounded-2xl bg-black/75 border border-white/10 space-y-4">
+                    <span class="text-xs font-bold text-kaaf-goldLight block text-center">المسار البصري لرحلة العميل (Full Funnel Customer Journey):</span>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-5 gap-3 text-center text-xs">
+                        <div class="p-3 rounded-xl bg-kaaf-darkSlate border border-white/5 space-y-1">
+                            <span class="font-bold text-white block">1. الاكتشاف</span>
+                            <p class="text-[10px] text-gray-400">عبر إعلانات تيك توك، ريلز، أو بحث جوجل.</p>
+                        </div>
+                        <div class="p-3 rounded-xl bg-kaaf-darkSlate border border-white/5 space-y-1">
+                            <span class="font-bold text-white block">2. التعرف والاهتمام</span>
+                            <p class="text-[10px] text-gray-400">مشاهدة التصاميم والاطلاع على تفاصيل الخدمات.</p>
+                        </div>
+                        <div class="p-3 rounded-xl bg-kaaf-darkSlate border border-white/5 space-y-1">
+                            <span class="font-bold text-white block">3. بناء الثقة</span>
+                            <p class="text-[10px] text-gray-400">متابعة حسابات السوشيال ومطابقة إجابات الـ AI.</p>
+                        </div>
+                        <div class="p-3 rounded-xl bg-kaaf-darkSlate border border-white/5 space-y-1">
+                            <span class="font-bold text-white block">4. الزيارة والتواصل</span>
+                            <p class="text-[10px] text-gray-400">الدخول إلى الموقع أو المراسلة عبر الواتساب.</p>
+                        </div>
+                        <div class="p-3 rounded-xl bg-kaaf-darkSlate border border-emerald-500/40 space-y-1 bg-emerald-950/20">
+                            <span class="font-bold text-emerald-400 block">5. اتخاذ القرار</span>
+                            <p class="text-[10px] text-gray-300">طلب الخدمة أو التعاقد بثقة واقتناع تام.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 08 — QUALITY ASSURANCE & EXECUTION METHODOLOGY                            -->
+        <!-- ========================================================================= -->
+        <section id="quality" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3 py-1 rounded-full bg-kaaf-gold/30 text-kaaf-goldLight font-black text-xs border border-kaaf-gold/50 flex items-center gap-1.5">
+                    <i class="fa-solid fa-award text-[11px]"></i>
+                    <span>معايير الجودة</span>
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide flex items-center gap-2.5">
+                    <i class="fa-solid fa-shield-halved text-kaaf-gold text-xl"></i>
+                    <span>جودة التنفيذ تبدأ من التخطيط وتستمر بالمتابعة والتحسين</span>
+                </h2>
+            </div>
+
+            <div class="relative overflow-hidden rounded-3xl p-8 sm:p-12 bg-gradient-to-br from-kaaf-blueDeep via-kaaf-darkSlate to-kaaf-cardBg border-2 border-kaaf-gold shadow-glow-gold space-y-8">
+                <div class="kaaf-ribbon absolute top-0 left-0 right-0"></div>
+
+                <div class="max-w-3xl space-y-2">
+                    <h3 class="text-xl sm:text-2xl font-black text-white">منهجية عمل KAAF Group المنضبطة في إدارة المشاريع</h3>
+                    <p class="text-xs sm:text-sm text-gray-300 leading-relaxed font-medium">
+                        تخضع كافة أعمال التسويق والتحسين الرقمي لمنظومة تشغيل دقيقة مقسمة إلى ست مراحل واضحة المعالم:
+                    </p>
+                </div>
+
+                <!-- 6 Phases Methodology Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs text-gray-300">
+                    <div class="p-4 rounded-2xl bg-black/60 border border-kaaf-gold/30 space-y-1.5">
+                        <div class="flex items-center gap-2 text-kaaf-gold font-bold">
+                            <span class="w-6 h-6 rounded-full bg-kaaf-gold/20 flex items-center justify-center text-[10px]">01</span>
+                            <span class="text-white text-xs">مرحلة الدراسة والتحليل</span>
+                        </div>
+                        <p class="text-[11px] text-gray-400">فهم عميق للنشاط، دراسة سلوك الجمهور، فحص المنافسين، وتشخيص الوضع الرقمي الحالي بدقة.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-black/60 border border-kaaf-gold/30 space-y-1.5">
+                        <div class="flex items-center gap-2 text-kaaf-gold font-bold">
+                            <span class="w-6 h-6 rounded-full bg-kaaf-gold/20 flex items-center justify-center text-[10px]">02</span>
+                            <span class="text-white text-xs">مرحلة التخطيط الاستراتيجي</span>
+                        </div>
+                        <p class="text-[11px] text-gray-400">إعداد استراتيجية المحتوى، خطة النشر الشهرية، خريطة الكلمات المفتاحية، وتحديد أهداف الحملات.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-black/60 border border-kaaf-gold/30 space-y-1.5">
+                        <div class="flex items-center gap-2 text-kaaf-gold font-bold">
+                            <span class="w-6 h-6 rounded-full bg-kaaf-gold/20 flex items-center justify-center text-[10px]">03</span>
+                            <span class="text-white text-xs">مرحلة التنفيذ المتخصص</span>
+                        </div>
+                        <p class="text-[11px] text-gray-400">إنتاج المحتوى، تصميم الجرافيك، تطبيق تحسينات السيو الفنية، وتشغيل الإعلانات وإدارة الحسابات.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-black/60 border border-kaaf-gold/30 space-y-1.5">
+                        <div class="flex items-center gap-2 text-kaaf-gold font-bold">
+                            <span class="w-6 h-6 rounded-full bg-kaaf-gold/20 flex items-center justify-center text-[10px]">04</span>
+                            <span class="text-white text-xs">مرحلة المراجعة والتدقيق</span>
+                        </div>
+                        <p class="text-[11px] text-gray-400">مراجعة الجودة الفنية واللغوية والتصميمية للمواد والإعدادات الرقمية قبل النشر أو الإطلاق الرسمي.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-black/60 border border-kaaf-gold/30 space-y-1.5">
+                        <div class="flex items-center gap-2 text-kaaf-gold font-bold">
+                            <span class="w-6 h-6 rounded-full bg-kaaf-gold/20 flex items-center justify-center text-[10px]">05</span>
+                            <span class="text-white text-xs">مرحلة القياس والتحليل</span>
+                        </div>
+                        <p class="text-[11px] text-gray-400">متابعة مؤشرات الأداء الرقمية، استخراج البيانات، وتحليل التفاعل وتكلفة النتائج ونمو الحسابات.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-black/60 border border-kaaf-gold/30 space-y-1.5">
+                        <div class="flex items-center gap-2 text-kaaf-gold font-bold">
+                            <span class="w-6 h-6 rounded-full bg-kaaf-gold/20 flex items-center justify-center text-[10px]">06</span>
+                            <span class="text-white text-xs">مرحلة التطوير المستمر</span>
+                        </div>
+                        <p class="text-[11px] text-gray-400">تعديل الاستهداف والمواد الإبداعية بناءً على مؤشرات السوق وردود فعل الجمهور لتحقيق أعلى عائد.</p>
+                    </div>
+                </div>
+
+                <!-- Professional Commitments List -->
+                <div class="space-y-2 pt-2 text-xs text-gray-300">
+                    <span class="font-bold text-white block">التزامات KAAF المهنية تجاه العميل:</span>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+                        <div class="flex items-center gap-2 p-2.5 rounded-xl bg-black/40 border border-white/5">
+                            <i class="fa-solid fa-circle-check text-kaaf-cyanLight"></i>
+                            <span>الالتزام التام بنطاق العمل المعتمد رسمياً.</span>
+                        </div>
+                        <div class="flex items-center gap-2 p-2.5 rounded-xl bg-black/40 border border-white/5">
+                            <i class="fa-solid fa-circle-check text-kaaf-cyanLight"></i>
+                            <span>المحافظة على هوية وخصوصية العلامة التجارية.</span>
+                        </div>
+                        <div class="flex items-center gap-2 p-2.5 rounded-xl bg-black/40 border border-white/5">
+                            <i class="fa-solid fa-circle-check text-kaaf-cyanLight"></i>
+                            <span>مراجعة وتدقيق جودة المواد قبل النشر.</span>
+                        </div>
+                        <div class="flex items-center gap-2 p-2.5 rounded-xl bg-black/40 border border-white/5">
+                            <i class="fa-solid fa-circle-check text-kaaf-cyanLight"></i>
+                            <span>استخدام الأرقام والبيانات في توجيه القرارات.</span>
+                        </div>
+                        <div class="flex items-center gap-2 p-2.5 rounded-xl bg-black/40 border border-white/5">
+                            <i class="fa-solid fa-circle-check text-kaaf-cyanLight"></i>
+                            <span>تقديم تقارير دورية قياسية ورؤى تطويرية.</span>
+                        </div>
+                        <div class="flex items-center gap-2 p-2.5 rounded-xl bg-black/40 border border-white/5">
+                            <i class="fa-solid fa-circle-check text-kaaf-cyanLight"></i>
+                            <span>تنسيق وتواصل مستمر مع ممثلي العميل.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 09 — DELIVERABLES & REPORTS (SCOPE OF DELIVERABLES)                        -->
+        <!-- ========================================================================= -->
+        <section id="deliverables" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3 py-1 rounded-full bg-kaaf-cyan/30 text-kaaf-cyanLight font-black text-xs border border-kaaf-cyan/50 flex items-center gap-1.5">
+                    <i class="fa-solid fa-box-open text-[11px]"></i>
+                    <span>المخرجات الملموسة</span>
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide flex items-center gap-2.5">
+                    <i class="fa-solid fa-clipboard-check text-kaaf-cyanLight text-xl"></i>
+                    <span>المخرجات والتقارير التنفيذية للخدمات</span>
+                </h2>
+            </div>
+
+            <p class="text-sm text-gray-300">
+                يحصل العميل على وثائق ومخرجات تشغيلية واضحة وملموسة تغطي كافة مسارات العمل المعتمدة:
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <!-- SEO Deliverables -->
+                <div class="web-card-blue p-5 rounded-2xl space-y-2 border-t-2 border-t-kaaf-cyanLight">
+                    <div class="flex items-center gap-2 text-white font-bold text-xs pb-1 border-b border-white/10">
+                        <i class="fa-solid fa-magnifying-glass text-kaaf-cyanLight"></i>
+                        <span>مخرجات خدمة SEO</span>
+                    </div>
+                    <ul class="space-y-1.5 text-xs text-gray-300">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-file-lines text-kaaf-cyanLight text-[10px]"></i> <span>تقرير تدقيق الموقع الشامل (SEO Audit).</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-file-lines text-kaaf-cyanLight text-[10px]"></i> <span>خريطة تحليل الكلمات المفتاحية (Keywords Map).</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-file-lines text-kaaf-cyanLight text-[10px]"></i> <span>خطة التحسينات الفنية والداخلية On-Page.</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-file-lines text-kaaf-cyanLight text-[10px]"></i> <span>توصيات المحتوى وهيكلة الصفحات.</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-file-lines text-kaaf-cyanLight text-[10px]"></i> <span>تقارير دورية بمؤشرات الظهور والترتيب العضوي.</span></li>
+                    </ul>
+                </div>
+
+                <!-- GEO Deliverables -->
+                <div class="web-card-purple p-5 rounded-2xl space-y-2 border-t-2 border-t-emerald-400">
+                    <div class="flex items-center gap-2 text-white font-bold text-xs pb-1 border-b border-white/10">
+                        <i class="fa-solid fa-brain text-emerald-400"></i>
+                        <span>مخرجات خدمة GEO للذكاء الاصطناعي</span>
+                    </div>
+                    <ul class="space-y-1.5 text-xs text-gray-300">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-file-lines text-emerald-400 text-[10px]"></i> <span>تقرير تحليل الحضور الرقمي التوليدي.</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-file-lines text-emerald-400 text-[10px]"></i> <span>بنك استفسارات وأسئلة المستخدمين (Prompts).</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-file-lines text-emerald-400 text-[10px]"></i> <span>توصيات تحسين المحتوى والكيان الرقمي للعلامة.</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-file-lines text-emerald-400 text-[10px]"></i> <span>خطة تطوير المعلومات المرجعية للعلامة.</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-file-lines text-emerald-400 text-[10px]"></i> <span>تقارير متابعة فرص التحسين والظهور التوليدي.</span></li>
+                    </ul>
+                </div>
+
+                <!-- Design Deliverables -->
+                <div class="web-card-gold p-5 rounded-2xl space-y-2 border-t-2 border-t-kaaf-gold">
+                    <div class="flex items-center gap-2 text-white font-bold text-xs pb-1 border-b border-white/10">
+                        <i class="fa-solid fa-palette text-kaaf-gold"></i>
+                        <span>مخرجات تطوير التصاميم والهوية</span>
+                    </div>
+                    <ul class="space-y-1.5 text-xs text-gray-300">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-file-lines text-kaaf-gold text-[10px]"></i> <span>دليل الأسلوب البصري للمحتوى الرقمي.</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-file-lines text-kaaf-gold text-[10px]"></i> <span>قوالب منشورات متناسقة مع الهوية.</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-file-lines text-kaaf-gold text-[10px]"></i> <span>تصاميم إعلانية وترويجية مخصصة للمنصات.</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-file-lines text-kaaf-gold text-[10px]"></i> <span>تصاميم أغلفة الفيديوهات والمواد المرئية.</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-file-lines text-kaaf-gold text-[10px]"></i> <span>حزم الملفات البصرية بصيغ عالية الجودة.</span></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media Deliverables -->
+                <div class="web-card-purple p-5 rounded-2xl space-y-2 border-t-2 border-t-kaaf-purpleLight">
+                    <div class="flex items-center gap-2 text-white font-bold text-xs pb-1 border-b border-white/10">
+                        <i class="fa-solid fa-hashtag text-kaaf-purpleLight"></i>
+                        <span>مخرجات إدارة السوشيال ميديا</span>
+                    </div>
+                    <ul class="space-y-1.5 text-xs text-gray-300">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-file-lines text-kaaf-purpleLight text-[10px]"></i> <span>وثيقة استراتيجية المحتوى وركائزه.</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-file-lines text-kaaf-purpleLight text-[10px]"></i> <span>تقويم النشر الشهري المنظم والمسبق.</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-file-lines text-kaaf-purpleLight text-[10px]"></i> <span>النصوص التسويقية (Captions) والهاشتاجات.</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-file-lines text-kaaf-purpleLight text-[10px]"></i> <span>إدارة الجدولة والنشر المنتظم.</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-file-lines text-kaaf-purpleLight text-[10px]"></i> <span>تقارير أداء دورية عن التفاعل والوصول.</span></li>
+                    </ul>
+                </div>
+
+                <!-- Paid Ads Deliverables -->
+                <div class="web-card-blue p-5 rounded-2xl space-y-2 border-t-2 border-t-kaaf-roseLight md:col-span-2 lg:col-span-2">
+                    <div class="flex items-center gap-2 text-white font-bold text-xs pb-1 border-b border-white/10">
+                        <i class="fa-solid fa-bullhorn text-kaaf-roseLight"></i>
+                        <span>مخرجات إدارة الحملات الإعلانية المدفوعة (TikTok & Instagram)</span>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-gray-300">
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-file-lines text-kaaf-roseLight text-[10px]"></i> <span>خطة الحملات والأهداف الإعلانية المعتمدة.</span></div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-file-lines text-kaaf-roseLight text-[10px]"></i> <span>هندسة وإعداد شرائح الجمهور والاستهداف.</span></div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-file-lines text-kaaf-roseLight text-[10px]"></i> <span>تجهيز المواد الإعلانية والنصوص الترويجية.</span></div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-file-lines text-kaaf-roseLight text-[10px]"></i> <span>المتابعة اليومية وإجراء تحسينات الاستهداف.</span></div>
+                        <div class="flex items-center gap-2 sm:col-span-2"><i class="fa-solid fa-file-lines text-kaaf-roseLight text-[10px]"></i> <span>تقارير تحليلية شاملة لمؤشرات الأداء، تكلفة النتائج، والتوصيات التحسينية.</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-black/60 border border-white/10 text-xs text-gray-400 text-center">
+                * ملاحظة هامة: يتم الاتفاق على الكميات الشهرية للمنشورات، والتصاميم، والفيديوهات، والحملات، والمقالات، والجدول الزمني التفصيلي ضمن وثيقة نطاق العمل التعاقدي النهائي بما يلائم المستهدفات الدقيقة للعلامة التجارية.
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 10 — CONCLUSION & CALL TO COLLABORATION                                   -->
+        <!-- ========================================================================= -->
+        <section id="conclusion" class="relative rounded-[32px] overflow-hidden p-8 sm:p-14 bg-gradient-to-br from-kaaf-blueDeep via-kaaf-darkSlate to-kaaf-dark border border-kaaf-cyan/40 text-center space-y-8 shadow-web-card">
+            <div class="kaaf-ribbon absolute top-0 left-0 right-0"></div>
+
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="w-16 h-16 rounded-2xl overflow-hidden border-2 border-kaaf-cyan shadow-glow-cyan mx-auto p-0.5 bg-black">
+                    <img src="https://i.ibb.co/qLQcG9vr/Whats-App-Image-2026-08-26-at-11-29-58.jpg" alt="KAAF Group Logo" class="w-full h-full object-cover rounded-xl" onerror="this.src='https://placehold.co/100x100/0A4C86/ffffff?text=KAAF'">
+                </div>
+
+                <span class="text-xs font-bold text-kaaf-cyanLight font-mono uppercase tracking-widest block">KAAF Group • Strategic Digital Partnership</span>
+
+                <h3 class="text-2xl sm:text-4xl font-black text-white leading-tight">
+                    خاتمة العرض الفني والدعوة إلى الشراكة الرقمية
+                </h3>
+
+                <p class="text-sm sm:text-base text-gray-200 leading-relaxed font-medium">
+                    «في <strong>KAAF</strong> نؤمن أن الحضور الرقمي القوي لا يتحقق من خلال خدمة منفردة، بل من خلال منظومة متكاملة تجمع بين التقنية والإبداع والتحليل والتطوير المستمر.
+                </p>
+                <p class="text-sm sm:text-base text-gray-200 leading-relaxed font-medium">
+                    نعمل على دعم العلامة التجارية في بناء حضور أكثر احترافية، وتحسين فرص اكتشافها عبر محركات البحث وأدوات الذكاء الاصطناعي، وتطوير هويتها البصرية، وإدارة حساباتها، والوصول إلى جمهورها من خلال حملات إعلانية مدروسة.
+                </p>
+                <p class="text-xs sm:text-sm text-kaaf-cyanLight font-bold">
+                    هدفنا هو أن تكون جميع القنوات الرقمية متكاملة في خدمة هدف واحد: تعزيز الوعي بالعلامة التجارية، وتسهيل وصول العملاء إليها، ودعم فرص النمو والمبيعات».
+                </p>
+
+                <div class="pt-2 text-lg sm:text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-kaaf-cyan via-kaaf-cyanLight to-kaaf-blueLight font-ibm">
+                    KAAF Group – شريككم في بناء حضور رقمي أكثر تأثيرًا.
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://wa.me/966537553910" target="_blank" class="px-8 py-3.5 rounded-2xl bg-gradient-to-r from-kaaf-blue via-kaaf-cyan to-kaaf-green text-slate-950 font-black text-xs shadow-xl flex items-center gap-2 hover:brightness-110 transition">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>مناقشة العرض الفني واعتماد نطاق العمل</span>
+                </a>
+                <a href="https://kaafmarketing.sa/" target="_blank" class="px-6 py-3.5 rounded-2xl bg-kaaf-dark border border-kaaf-border text-white font-bold text-xs hover:border-kaaf-cyan transition flex items-center gap-2">
+                    <i class="fa-solid fa-globe text-kaaf-cyanLight"></i>
+                    <span>الموقع الرسمي: kaafmarketing.sa</span>
+                </a>
+            </div>
+
+            <!-- Formal Signatures Box (Technical Endorsement) -->
+            <div class="pt-8 border-t border-white/10 grid grid-cols-1 md:grid-cols-2 gap-6 text-right text-xs text-gray-400">
+                <div class="space-y-1">
+                    <span class="text-white font-bold block text-sm">مقدم العرض الفني:</span>
+                    <p class="text-gray-300 font-bold">KAAF Group for Marketing, Software & Media Solutions</p>
+                    <p>مجموعة كاف لحلول التسويق والبرمجيات والحلول الإعلامية</p>
+                    <p class="font-mono text-gray-500">المملكة العربية السعودية • الرياض</p>
+                </div>
+                <div class="space-y-1 md:text-left">
+                    <span class="text-white font-bold block text-sm">الموجه إليه العرض:</span>
+                    <p class="text-gray-300 font-bold">العلامة التجارية الموقرة</p>
+                    <p>الاسم والصفة: ................................................................</p>
+                    <p>التوقيع والاعتماد الفني: ................................................</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Interactive Ambient Canvas Script -->
+    <script>
+        (function() {
+            const canvas = document.getElementById('interactive-bg-canvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            let width, height;
+            let particles = [];
+            const particleCount = 40;
+            const colors = ['#0A4C86', '#06B6D4', '#00875A', '#7C3AED', '#D4AF37'];
+
+            function resize() {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
+            }
+
+            window.addEventListener('resize', resize);
+
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * width;
+                    this.y = Math.random() * height;
+                    this.vx = (Math.random() - 0.5) * 0.7;
+                    this.vy = (Math.random() - 0.5) * 0.7;
+                    this.radius = Math.random() * 2 + 1;
+                    this.color = colors[Math.floor(Math.random() * colors.length)];
+                    this.alpha = Math.random() * 0.35 + 0.2;
+                }
+
+                update() {
+                    this.x += this.vx;
+                    this.y += this.vy;
+                    if (this.x < 0 || this.x > width) this.vx *= -1;
+                    if (this.y < 0 || this.y > height) this.vy *= -1;
+                }
+
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = this.color;
+                    ctx.globalAlpha = this.alpha;
+                    ctx.fill();
+                }
+            }
+
+            function init() {
+                resize();
+                particles = [];
+                for (let i = 0; i < particleCount; i++) {
+                    particles.push(new Particle());
+                }
+            }
+
+            function connect() {
+                const maxDist = 130;
+                for (let a = 0; a < particles.length; a++) {
+                    for (let b = a + 1; b < particles.length; b++) {
+                        let dx = particles[a].x - particles[b].x;
+                        let dy = particles[a].y - particles[b].y;
+                        let dist = Math.sqrt(dx * dx + dy * dy);
+
+                        if (dist < maxDist) {
+                            ctx.beginPath();
+                            ctx.moveTo(particles[a].x, particles[a].y);
+                            ctx.lineTo(particles[b].x, particles[b].y);
+                            ctx.strokeStyle = '#06B6D4';
+                            ctx.globalAlpha = (1 - (dist / maxDist)) * 0.2;
+                            ctx.lineWidth = 1;
+                            ctx.stroke();
+                        }
+                    }
+                }
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, width, height);
+                ctx.globalAlpha = 1;
+                for (let i = 0; i < particles.length; i++) {
+                    particles[i].update();
+                    particles[i].draw();
+                }
+                connect();
+                requestAnimationFrame(animate);
+            }
+
+            window.onload = function() {
+                init();
+                animate();
+            };
+        })();
+    </script>
+</body>
+</html>
